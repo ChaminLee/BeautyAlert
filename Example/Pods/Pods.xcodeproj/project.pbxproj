@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F81D7193BE4ABF5C3060863A50CA122 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F4FB43CD48E3B36410F8E0CC89617 /* ReplaceMe.swift */; };
+		0F81D7193BE4ABF5C3060863A50CA122 /* BeautyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F4FB43CD48E3B36410F8E0CC89617 /* BeautyAlert.swift */; };
 		2AD95CECEBDFCA4013B436DCAEE1225F /* Pods-BeautyAlert_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE12D7A7E6540D749E5B435E3565E6E4 /* Pods-BeautyAlert_Tests-dummy.m */; };
 		5DDD3431AF23C2B8AF53F1EE210619F5 /* BeautyAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C60BEAEAAA9511344FBBADD4C7DCCBA /* BeautyAlert-dummy.m */; };
 		5FD24167A8B9E5780CD5C7DBDB0C473A /* Pods-BeautyAlert_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB17BE9F57EE4C3E9E6170AF32E0494A /* Pods-BeautyAlert_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,18 +42,18 @@
 		1C60BEAEAAA9511344FBBADD4C7DCCBA /* BeautyAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BeautyAlert-dummy.m"; sourceTree = "<group>"; };
 		3D9AFBAE66B5B3BDBE74BFDD6F867C96 /* BeautyAlert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BeautyAlert-Info.plist"; sourceTree = "<group>"; };
 		44FA27602157C69056FE66E34F349E68 /* BeautyAlert */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BeautyAlert; path = BeautyAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47407D0D7E2F17B5FA61F6A113B70663 /* BeautyAlert.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BeautyAlert.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		47407D0D7E2F17B5FA61F6A113B70663 /* BeautyAlert.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BeautyAlert.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4E28BAE4F0AF4BECD48715BF44112B2C /* Pods-BeautyAlert_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BeautyAlert_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		515BA625D8385F1C76AFA30CE6C39996 /* Pods-BeautyAlert_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BeautyAlert_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		57F63A5B543EFE1C5B059DC1E4EBA116 /* Pods-BeautyAlert_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BeautyAlert_Example-dummy.m"; sourceTree = "<group>"; };
-		692F4FB43CD48E3B36410F8E0CC89617 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = BeautyAlert/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		692F4FB43CD48E3B36410F8E0CC89617 /* BeautyAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeautyAlert.swift; path = BeautyAlert/Classes/BeautyAlert.swift; sourceTree = "<group>"; };
 		6BD68686428E4D8B547E4792A24125E2 /* Pods-BeautyAlert_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BeautyAlert_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		73E7028F7741E177DAE6FD67E8DCA2CD /* Pods-BeautyAlert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeautyAlert_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		76F47747E73F88876C0FE805763D4E02 /* BeautyAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BeautyAlert-prefix.pch"; sourceTree = "<group>"; };
-		7D986DB0D29F6186654856305740B3AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7D986DB0D29F6186654856305740B3AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		831D5F9ECBE2B47BC35024869AB25DDF /* BeautyAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BeautyAlert-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA8096E905F445E614F354FA3B7DC868 /* Pods-BeautyAlert_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BeautyAlert_Example-Info.plist"; sourceTree = "<group>"; };
 		AAF9583500D5CDF6813AEE465FB8CC8B /* Pods-BeautyAlert_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BeautyAlert_Tests.modulemap"; sourceTree = "<group>"; };
 		AB17BE9F57EE4C3E9E6170AF32E0494A /* Pods-BeautyAlert_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BeautyAlert_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		B3B385F60A4BE80E1FB38E5EDE4CEA93 /* Pods-BeautyAlert_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeautyAlert_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BB181000F30C0D21A26C34B795996C04 /* Pods-BeautyAlert_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BeautyAlert_Example.modulemap"; sourceTree = "<group>"; };
 		CE80761398C6BA7F47B4F30F5A736CF2 /* BeautyAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BeautyAlert.debug.xcconfig; sourceTree = "<group>"; };
-		D0B64360E05AC3CA450DDA3F5064C13D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D0B64360E05AC3CA450DDA3F5064C13D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D1D7CD2712FDAD45D17DCF0A7A759127 /* Pods-BeautyAlert_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BeautyAlert_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D42456B405B5F4DAC21821100C7B03D6 /* Pods-BeautyAlert_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BeautyAlert_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DB677AF358406B65E07262BB442866EC /* Pods-BeautyAlert_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BeautyAlert_Tests"; path = Pods_BeautyAlert_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +120,7 @@
 		3FA347741EAF8442A205C0F3A5C7D54D /* BeautyAlert */ = {
 			isa = PBXGroup;
 			children = (
-				692F4FB43CD48E3B36410F8E0CC89617 /* ReplaceMe.swift */,
+				692F4FB43CD48E3B36410F8E0CC89617 /* BeautyAlert.swift */,
 				788994B04EEAD1E094AF0ADD43DCC153 /* Pod */,
 				67D8192E615022747FB15D62C8E104DD /* Support Files */,
 			);
@@ -368,7 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DDD3431AF23C2B8AF53F1EE210619F5 /* BeautyAlert-dummy.m in Sources */,
-				0F81D7193BE4ABF5C3060863A50CA122 /* ReplaceMe.swift in Sources */,
+				0F81D7193BE4ABF5C3060863A50CA122 /* BeautyAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,8 +685,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
