@@ -1,0 +1,16 @@
+PODS:
+  - BeautyAlert (0.1.0)
+
+DEPENDENCIES:
+  - BeautyAlert (from `../`)
+
+EXTERNAL SOURCES:
+  BeautyAlert:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BeautyAlert: dab913fc9f0a3ed26efa7e05f32f7b0bdbee2d26
+
+PODFILE CHECKSUM: ee32767132cc594384a219e711254009840e9fbf
+
+COCOAPODS: 1.11.2
