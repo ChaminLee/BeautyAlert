@@ -88,14 +88,14 @@ open class BeautyAlert: UIViewController {
             self.buttonStackView.addArrangedSubview(confirmButton)
             confirmAction = action
             confirmButton.setTitle(title, for: .normal)
-            confirmButton.titleLabel?.textColor = titleColor
+            confirmButton.setTitleColor(titleColor, for: .normal)
             confirmButton.backgroundColor = backgroundColor
             confirmButton.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
         case .cancel:
             self.buttonStackView.addArrangedSubview(cancelButton)
             cancelAction = action
             cancelButton.setTitle(title, for: .normal)
-            cancelButton.titleLabel?.textColor = titleColor
+            cancelButton.setTitleColor(titleColor, for: .normal)
             cancelButton.backgroundColor = backgroundColor
             cancelButton.addTarget(self, action: #selector(didTapCancelButton), for: .touchUpInside)
         }

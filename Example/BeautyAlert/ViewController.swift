@@ -33,10 +33,10 @@ class ViewController: UIViewController {
     
     @objc private func presentBeautyAlert() {
         let beautyAlert = BeautyAlert()
-        beautyAlert.setContentAttribute(title: "Not Enough Money 💸", titleColor: .black, backgroundColor: .white)
+        beautyAlert.setContentAttribute(title: "Not Enough Money 💸", titleColor: .white, backgroundColor: .black)
         beautyAlert.setContentShadowDirection(style: .rightBottom)
         beautyAlert.addButton(title: "Cancel", titleColor: .black, backgroundColor: .lightGray, style: .cancel, action: cancelAction)
-        beautyAlert.addButton(title: "OK", titleColor: .white, backgroundColor: .orange, style: .default, action: confirmAction)
+        beautyAlert.addButton(title: "OK", titleColor: .black, backgroundColor: .white, style: .default, action: confirmAction)
         self.present(beautyAlert, animated: true, completion: nil)
     }
 
