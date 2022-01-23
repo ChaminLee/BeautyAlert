@@ -20,10 +20,9 @@ public enum ShadowStyle {
     }
 }
 
-public enum ButtonType {
-    case confirm
+public enum ButtonStyle {
+    case `default`
     case cancel
-    case all
 }
 
 open class BeautyAlert: UIViewController {
@@ -62,6 +61,9 @@ open class BeautyAlert: UIViewController {
         return button
     }()
     
+    private var cancelAction: (() -> ())?
+    private var confirmAction: (() -> ())?
+    
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = .gray.withAlphaComponent(0.5)
@@ -74,34 +76,40 @@ open class BeautyAlert: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    public func setAttribute(title: String? = nil, titleColor: UIColor = .black, backgroundColor: UIColor = .white, buttonType: ButtonType) {
+    public func setContentAttribute(title: String? = nil, titleColor: UIColor = .black, backgroundColor: UIColor = .white) {
         titleLabel.text = title
         titleLabel.textColor = titleColor
         contentView.backgroundColor = backgroundColor
-        
-        switch buttonType {
-        case .confirm:
-            buttonStackView.addArrangedSubview(confirmButton)
+    }
+    
+    public func addButton(title: String, titleColor: UIColor, backgroundColor: UIColor, style: ButtonStyle, action: (() -> ())?) {
+        switch style {
+        case .`default`:
+            self.buttonStackView.addArrangedSubview(confirmButton)
+            confirmAction = action
+            confirmButton.setTitle(title, for: .normal)
+            confirmButton.titleLabel?.textColor = titleColor
+            confirmButton.backgroundColor = backgroundColor
+            confirmButton.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
         case .cancel:
-            buttonStackView.addArrangedSubview(cancelButton)
-        case .all:
-            [cancelButton, confirmButton].forEach {
-                buttonStackView.addArrangedSubview($0)
-            }
+            self.buttonStackView.addArrangedSubview(cancelButton)
+            cancelAction = action
+            cancelButton.setTitle(title, for: .normal)
+            cancelButton.titleLabel?.textColor = titleColor
+            cancelButton.backgroundColor = backgroundColor
+            cancelButton.addTarget(self, action: #selector(didTapCancelButton), for: .touchUpInside)
         }
     }
     
-    public func setButtonAttribute(cancelTitle: String, confirmTitle: String, titleColor: UIColor, backgroundColor: UIColor) {
-        cancelButton.setTitle(cancelTitle, for: .normal)
-        confirmButton.setTitle(confirmTitle, for: .normal)
-        
-        [cancelButton, confirmButton].forEach {
-            $0.backgroundColor = backgroundColor
-            $0.titleLabel?.textColor = titleColor
-        }
+    @objc private func didTapConfirmButton() {
+        confirmAction?()
     }
     
-    public func setBackgroundShadow(style: ShadowStyle) {
+    @objc private func didTapCancelButton() {
+        cancelAction?()
+    }
+    
+    public func setContentShadowDirection(style: ShadowStyle) {
         contentView.layer.shadowRadius = 10
         contentView.layer.shadowOpacity = 0.5
         contentView.layer.shadowOffset = style.size        

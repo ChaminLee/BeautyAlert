@@ -23,11 +23,20 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Beauty Alert
+    func confirmAction() {
+        print("confirm")
+    }
+    
+    func cancelAction() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc private func presentBeautyAlert() {
         let beautyAlert = BeautyAlert()
-        beautyAlert.setAttribute(title: "Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸Not Enough Money 💸", titleColor: .black, backgroundColor: .white, buttonType: .all)
-        beautyAlert.setBackgroundShadow(style: .rightBottom)
-        beautyAlert.setButtonAttribute(cancelTitle: "Cancel", confirmTitle: "OK", titleColor: .white, backgroundColor: .black)
+        beautyAlert.setContentAttribute(title: "Not Enough Money 💸", titleColor: .black, backgroundColor: .white)
+        beautyAlert.setContentShadowDirection(style: .rightBottom)
+        beautyAlert.addButton(title: "Cancel", titleColor: .black, backgroundColor: .lightGray, style: .cancel, action: cancelAction)
+        beautyAlert.addButton(title: "OK", titleColor: .white, backgroundColor: .orange, style: .default, action: confirmAction)
         self.present(beautyAlert, animated: true, completion: nil)
     }
 
