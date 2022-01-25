@@ -1,5 +1,10 @@
 import UIKit
 
+public enum AlertStyle {
+    case roundedRect
+    case rectangle
+}
+
 public enum ShadowStyle {
     case leftBottom
     case rightBottom
@@ -21,18 +26,32 @@ public enum ShadowStyle {
 }
 
 public enum ButtonStyle {
-    case `default`
+    case confirm
     case cancel
 }
 
 open class BeautyAlert: UIViewController {
-    private var baseView = UIView()
     private var contentView = UIView()
+    private var contentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        return stackView
+    }()
+    
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "This is Sample Title Text"
+        label.numberOfLines = 2
+        label.font = .preferredFont(forTextStyle: .headline)
+        return label
+    }()
+    
+    private var messageLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
         label.numberOfLines = 4
+        label.font = .preferredFont(forTextStyle: .subheadline)
         return label
     }()
     
@@ -49,6 +68,7 @@ open class BeautyAlert: UIViewController {
         let button = UIButton()
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 10
+        button.titleLabel?.font = .preferredFont(forTextStyle: .body)
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         return button
     }()
@@ -57,6 +77,7 @@ open class BeautyAlert: UIViewController {
         let button = UIButton()
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 10
+        button.titleLabel?.font = .preferredFont(forTextStyle: .body)
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         return button
     }()
@@ -76,15 +97,17 @@ open class BeautyAlert: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    public func setContentAttribute(title: String? = nil, titleColor: UIColor = .black, backgroundColor: UIColor = .white) {
+    public func setContentAttribute(title: String? = nil, titleColor: UIColor = .black, message: String? = nil, messageColor: UIColor = .black, backgroundColor: UIColor = .white) {
         titleLabel.text = title
         titleLabel.textColor = titleColor
+        messageLabel.text = message
+        messageLabel.textColor = messageColor
         contentView.backgroundColor = backgroundColor
     }
     
     public func addButton(title: String, titleColor: UIColor, backgroundColor: UIColor, style: ButtonStyle, action: (() -> ())?) {
         switch style {
-        case .`default`:
+        case .confirm:
             self.buttonStackView.addArrangedSubview(confirmButton)
             confirmAction = action
             confirmButton.setTitle(title, for: .normal)
@@ -116,43 +139,40 @@ open class BeautyAlert: UIViewController {
     }
     
     private func configUI() {
-        self.view.addSubview(baseView)
-        baseView.addSubview(contentView)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(buttonStackView)
-        
         contentView.layer.masksToBounds = false
         contentView.layer.cornerRadius = 10
         
-        [baseView, contentView, titleLabel, buttonStackView].forEach {
+        view.addSubview(contentView)
+        contentView.addSubview(contentStackView)
+        
+        [titleLabel, messageLabel, buttonStackView].forEach {
+            contentStackView.addArrangedSubview($0)
+        }
+        
+        if #available(iOS 11.0, *) {
+            contentStackView.setCustomSpacing(15, after: messageLabel)
+        }
+        
+        [contentView, contentStackView].forEach {
             $0?.translatesAutoresizingMaskIntoConstraints = false
         }
         
         NSLayoutConstraint.activate([
-            baseView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            baseView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            baseView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            baseView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            
-            contentView.centerXAnchor.constraint(equalTo: baseView.centerXAnchor),
-            contentView.centerYAnchor.constraint(equalTo: baseView.centerYAnchor),
+            contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            contentView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             contentView.widthAnchor.constraint(equalToConstant: self.view.frame.width * 0.8),
             
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-            
-            buttonStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            buttonStackView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            buttonStackView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            buttonStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
+            contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            contentStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            contentStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            contentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
         ])
     }
     
     private func tapBehindView() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapToDismiss))
         tapGesture.delegate = self
-        baseView.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
     }
     
     @objc func tapToDismiss() {
