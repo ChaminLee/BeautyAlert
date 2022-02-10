@@ -2,7 +2,7 @@
 
 [![CI Status](https://img.shields.io/travis/ChaminLee/BeautyAlert.svg?style=flat)](https://travis-ci.org/ChaminLee/BeautyAlert) [![Version](https://img.shields.io/cocoapods/v/BeautyAlert.svg?style=flat)](https://cocoapods.org/pods/BeautyAlert) [![License](https://img.shields.io/cocoapods/l/BeautyAlert.svg?style=flat)](https://cocoapods.org/pods/BeautyAlert) [![Platform](https://img.shields.io/cocoapods/p/BeautyAlert.svg?style=flat)](https://cocoapods.org/pods/BeautyAlert)
 
-BeautyAlert helps You can easily design by determining the color, shape, and shadow direction of the alert according to your app style.
+BeautyAlert helps you can easily design by determining the color, shape, and shadow direction of the alert according to your app style.
 
 ## Requirements
 
