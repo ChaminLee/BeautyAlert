@@ -12,7 +12,11 @@ import BeautyAlert
 class ViewController: UIViewController {
     private let presentButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.setTitle("BeautyAlert", for: .normal)
+        button.sizeToFit()
+        button.titleEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        button.layer.cornerRadius = button.frame.height / 2
+        button.backgroundColor = .systemIndigo
         button.addTarget(self, action: #selector(presentBeautyAlert), for: .touchUpInside)
         return button
     }()
@@ -33,10 +37,10 @@ class ViewController: UIViewController {
     
     @objc private func presentBeautyAlert() {
         let beautyAlert = BeautyAlert()
-        beautyAlert.setContentAttribute(title: "Not Enough Money 💸", titleColor: .white, message: "you have to visit bank", messageColor: .lightGray, backgroundColor: .black)
+        beautyAlert.setContentAttribute(title: "BeautyAlert Title ✨", titleColor: .black, message: "BeautyAlert helps to make custom alert easily", messageColor: .black, backgroundColor: .white)
         beautyAlert.setContentShadowDirection(style: .rightBottom)
         beautyAlert.addButton(title: "Cancel", titleColor: .black, backgroundColor: .lightGray, style: .cancel, action: cancelAction)
-        beautyAlert.addButton(title: "OK", titleColor: .black, backgroundColor: .white, style: .confirm, action: confirmAction)
+        beautyAlert.addButton(title: "OK", titleColor: .white, backgroundColor: .orange, style: .confirm, action: confirmAction)
         self.present(beautyAlert, animated: true, completion: nil)
     }
 
@@ -46,7 +50,8 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             presentButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            presentButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            presentButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            presentButton.widthAnchor.constraint(equalToConstant: 130)
         ])
     }
 }
