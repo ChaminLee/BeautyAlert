@@ -85,7 +85,7 @@ self.present(beautyAlert, animated: true, completion: nil)
 
 |case1|case2|...|
 |:---:|:---:|:---:|
-|![](https://i.imgur.com/DlFneNk.png)|![](https://i.imgur.com/sBKCqbD.png)|...|
+|![](https://i.imgur.com/ObEeJns.png)|![](https://i.imgur.com/sBKCqbD.png)|...|
 
 Make a alert style that you want!
 
