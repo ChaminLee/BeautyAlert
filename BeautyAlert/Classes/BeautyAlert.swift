@@ -1,10 +1,5 @@
 import UIKit
 
-public enum AlertStyle {
-    case roundedRect
-    case rectangle
-}
-
 public enum ShadowStyle {
     case leftBottom
     case rightBottom
