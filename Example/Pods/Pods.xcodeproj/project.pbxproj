@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F81D7193BE4ABF5C3060863A50CA122 /* BeautyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F4FB43CD48E3B36410F8E0CC89617 /* BeautyAlert.swift */; };
+		128D99AD27B6187A00AE7910 /* BeautyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128D99AC27B6187A00AE7910 /* BeautyAlert.swift */; };
 		2AD95CECEBDFCA4013B436DCAEE1225F /* Pods-BeautyAlert_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE12D7A7E6540D749E5B435E3565E6E4 /* Pods-BeautyAlert_Tests-dummy.m */; };
 		5DDD3431AF23C2B8AF53F1EE210619F5 /* BeautyAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C60BEAEAAA9511344FBBADD4C7DCCBA /* BeautyAlert-dummy.m */; };
 		5FD24167A8B9E5780CD5C7DBDB0C473A /* Pods-BeautyAlert_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB17BE9F57EE4C3E9E6170AF32E0494A /* Pods-BeautyAlert_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		08180E055220DFAD3C9990DA6C0D9F0A /* BeautyAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BeautyAlert.modulemap; sourceTree = "<group>"; };
 		094009CDD025E3073A89D820F2F16881 /* Pods-BeautyAlert_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeautyAlert_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		128D99AC27B6187A00AE7910 /* BeautyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeautyAlert.swift; path = Sources/BeautyAlert/Classes/BeautyAlert.swift; sourceTree = "<group>"; };
 		1C60BEAEAAA9511344FBBADD4C7DCCBA /* BeautyAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BeautyAlert-dummy.m"; sourceTree = "<group>"; };
 		3D9AFBAE66B5B3BDBE74BFDD6F867C96 /* BeautyAlert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BeautyAlert-Info.plist"; sourceTree = "<group>"; };
 		44FA27602157C69056FE66E34F349E68 /* BeautyAlert */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BeautyAlert; path = BeautyAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +47,6 @@
 		4E28BAE4F0AF4BECD48715BF44112B2C /* Pods-BeautyAlert_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BeautyAlert_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		515BA625D8385F1C76AFA30CE6C39996 /* Pods-BeautyAlert_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BeautyAlert_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		57F63A5B543EFE1C5B059DC1E4EBA116 /* Pods-BeautyAlert_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BeautyAlert_Example-dummy.m"; sourceTree = "<group>"; };
-		692F4FB43CD48E3B36410F8E0CC89617 /* BeautyAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeautyAlert.swift; path = BeautyAlert/Classes/BeautyAlert.swift; sourceTree = "<group>"; };
 		6BD68686428E4D8B547E4792A24125E2 /* Pods-BeautyAlert_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BeautyAlert_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		73E7028F7741E177DAE6FD67E8DCA2CD /* Pods-BeautyAlert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeautyAlert_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		3FA347741EAF8442A205C0F3A5C7D54D /* BeautyAlert */ = {
 			isa = PBXGroup;
 			children = (
-				692F4FB43CD48E3B36410F8E0CC89617 /* BeautyAlert.swift */,
+				128D99AC27B6187A00AE7910 /* BeautyAlert.swift */,
 				788994B04EEAD1E094AF0ADD43DCC153 /* Pod */,
 				67D8192E615022747FB15D62C8E104DD /* Support Files */,
 			);
@@ -368,7 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DDD3431AF23C2B8AF53F1EE210619F5 /* BeautyAlert-dummy.m in Sources */,
-				0F81D7193BE4ABF5C3060863A50CA122 /* BeautyAlert.swift in Sources */,
+				128D99AD27B6187A00AE7910 /* BeautyAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

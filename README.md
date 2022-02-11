@@ -10,13 +10,18 @@ BeautyAlert helps you can easily design by determining the color, shape, and sha
 - iOS: 13.0 or higher
 
 ## Installation
-
+#### CocoaPods
 BeautyAlert is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'BeautyAlert'
 ```
+#### SPM
+In the Xcode 13.0+ enter BeautyAlert URL in Add Package Dependency   
+```
+https://github.com/ChaminLee/BeautyAlert
+```   
 
 ## Usage
 
