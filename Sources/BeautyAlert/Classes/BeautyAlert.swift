@@ -92,7 +92,13 @@ open class BeautyAlert: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    public func setContentAttribute(title: String? = nil, titleColor: UIColor = .black, message: String? = nil, messageColor: UIColor = .black, backgroundColor: UIColor = .white) {
+    public func setContentAttribute(
+        title: String? = nil,
+        titleColor: UIColor = .black,
+        message: String? = nil,
+        messageColor: UIColor = .black,
+        backgroundColor: UIColor = .white
+    ) {
         titleLabel.text = title
         titleLabel.textColor = titleColor
         messageLabel.text = message
@@ -100,7 +106,13 @@ open class BeautyAlert: UIViewController {
         contentView.backgroundColor = backgroundColor
     }
     
-    public func addButton(title: String, titleColor: UIColor, backgroundColor: UIColor, style: ButtonStyle, action: (() -> ())?) {
+    public func addButton(
+        title: String,
+        titleColor: UIColor,
+        backgroundColor: UIColor,
+        style: ButtonStyle,
+        action: (() -> ())?
+    ) {
         switch style {
         case .confirm:
             self.buttonStackView.addArrangedSubview(confirmButton)
@@ -143,7 +155,7 @@ open class BeautyAlert: UIViewController {
         [titleLabel, messageLabel, buttonStackView].forEach {
             contentStackView.addArrangedSubview($0)
         }
-        
+      
         if #available(iOS 11.0, *) {
             contentStackView.setCustomSpacing(15, after: messageLabel)
         }
