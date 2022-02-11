@@ -37,11 +37,13 @@ let beautyAlert = BeautyAlert()
 You can choose the title and content messages, their color, and the color of the entire background.
 
 ```swift 
-beautyAlert.setContentAttribute(title: "BeautyAlert Title ✨", 
-                                titleColor: .black, 
-                                message: "BeautyAlert helps to make custom alert easily", 
-                                messageColor: .black, 
-                                backgroundColor: .white)
+beautyAlert.setContentAttribute(
+    title: "BeautyAlert Title ✨",
+    titleColor: .black,
+    message: "BeautyAlert helps to make custom alert easily", 
+    messageColor: .black, 
+    backgroundColor: .white
+)
 ```
 
 ### 3. Add custom buttons with custom actions
@@ -50,17 +52,21 @@ You can create a confirmation and cancel button, and you can also specify an act
 
 ```swift
 // Cancel Button
-beautyAlert.addButton(title: "Cancel",
-                      titleColor: .black,
-                      backgroundColor: .lightGray, 
-                      style: .cancel, 
-                      action: cancelAction)
+beautyAlert.addButton(
+    title: "Cancel",
+    titleColor: .black,
+    backgroundColor: .lightGray, 
+    style: .cancel, 
+    action: cancelAction
+)
 // OK Button
-beautyAlert.addButton(title: "OK",
-                      titleColor: .white,
-                      backgroundColor: .orange, 
-                      style: .confirm,
-                      action: confirmAction)
+beautyAlert.addButton(
+    title: "OK",
+    titleColor: .white,
+    backgroundColor: .orange, 
+    style: .confirm,
+    action: confirmAction
+)
 
 // Actions 
 func confirmAction() {
