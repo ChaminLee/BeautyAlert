@@ -36,12 +36,35 @@ class ViewController: UIViewController {
     }
     
     @objc private func presentBeautyAlert() {
+        self.present(configureBeautyAlert(), animated: true, completion: nil)
+    }
+  
+    private func configureBeautyAlert() -> BeautyAlert {
         let beautyAlert = BeautyAlert()
-        beautyAlert.setContentAttribute(title: "BeautyAlert Title ✨", titleColor: .black, message: "BeautyAlert helps to make custom alert easily", messageColor: .black, backgroundColor: .white)
+        beautyAlert.setContentAttribute(
+            title: "BeautyAlert Title ✨",
+            titleColor: .black,
+            message: "BeautyAlert helps to make custom alert easily",
+            messageColor: .black,
+            backgroundColor: .white
+        )
         beautyAlert.setContentShadowDirection(style: .rightBottom)
-        beautyAlert.addButton(title: "Cancel", titleColor: .white, backgroundColor: .lightGray, style: .cancel, action: cancelAction)
-        beautyAlert.addButton(title: "OK", titleColor: .white, backgroundColor: .orange, style: .confirm, action: confirmAction)
-        self.present(beautyAlert, animated: true, completion: nil)
+        beautyAlert.addButton(
+            title: "Cancel",
+            titleColor: .white,
+            backgroundColor: .lightGray,
+            style: .cancel,
+            action: cancelAction
+        )
+        beautyAlert.addButton(
+            title: "OK",
+            titleColor: .white,
+            backgroundColor: .orange,
+            style: .confirm,
+            action: confirmAction
+        )
+        
+        return beautyAlert
     }
 
     private func configUI() {
