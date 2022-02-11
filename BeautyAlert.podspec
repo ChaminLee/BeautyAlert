@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.author           = { 'ChaminLee' => 'trueman9512@naver.com' }
   s.source           = { :git => 'https://github.com/ChaminLee/BeautyAlert.git', :tag => s.version.to_s }
   s.ios.deployment_target = '13.0'
-  s.source_files = 'BeautyAlert/Classes/**/*'
+  s.source_files = 'Sources/BeautyAlert/Classes/**/*'
   s.frameworks = 'UIKit'
   s.swift_version = "4.0"
 end
