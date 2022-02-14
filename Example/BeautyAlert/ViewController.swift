@@ -42,9 +42,9 @@ class ViewController: UIViewController {
     private func configureBeautyAlert() -> BeautyAlert {
         let beautyAlert = BeautyAlert()
         beautyAlert.setContentAttribute(
-            title: "BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨BeautyAlert Title ✨",
+            title: "BeautyAlert Title ✨",
             titleColor: .black,
-            message: "BeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easilyBeautyAlert helps to make custom alert easily",
+            message: "BeautyAlert helps to make custom alert easily",
             messageColor: .black,
             backgroundColor: .white
         )
