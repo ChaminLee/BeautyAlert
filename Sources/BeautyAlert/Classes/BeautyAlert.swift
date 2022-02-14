@@ -45,7 +45,7 @@ open class BeautyAlert: UIViewController {
     private var messageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.numberOfLines = 4
+        label.numberOfLines = 10
         label.font = .preferredFont(forTextStyle: .subheadline)
         return label
     }()
