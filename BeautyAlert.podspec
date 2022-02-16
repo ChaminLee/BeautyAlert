@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BeautyAlert'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'BeautyAlert provides alerts with custom shapes, colors, buttons'
   s.homepage         = 'https://github.com/ChaminLee/BeautyAlert'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
