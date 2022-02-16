@@ -89,16 +89,28 @@ self.present(beautyAlert, animated: true, completion: nil)
 
 ### 5. Simulation 
 
-<img src="https://i.imgur.com/5KCCa7j.gif" width=50%>
+|iPhone|iPad|
+|:---:|:---:|
+|<img src="https://i.imgur.com/5KCCa7j.gif">|<img src="https://i.imgur.com/rIlADoJ.gif">|
+
 
 <br> 
 <br> 
 
-|case1|case2|...|
-|:---:|:---:|:---:|
-|![](https://i.imgur.com/ObEeJns.png)|![](https://i.imgur.com/sBKCqbD.png)|...|
+You can configure style with one button or two buttons
 
-Make a alert style that you want!
+|1 Button (iPhone)|2 Button (iPhone)|
+|:---:|:---:|
+|![](https://i.imgur.com/Fdipohv.png)|![](https://i.imgur.com/ObEeJns.png)|
+|1 Button (iPad)|2 Button (iPad)|
+|![](https://i.imgur.com/tM79VKD.png)|![](https://i.imgur.com/1LqklIu.png)|
+
+
+
+
+
+
+## Make a alert style that you want!
 
 
 

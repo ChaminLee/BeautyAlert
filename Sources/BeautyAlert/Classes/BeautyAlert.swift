@@ -1,5 +1,9 @@
 import UIKit
 
+private enum UserDevice {
+    static let deviceIdiom = UIScreen.main.traitCollection.userInterfaceIdiom
+}
+
 public enum ShadowStyle {
     case leftBottom
     case rightBottom
@@ -45,7 +49,7 @@ open class BeautyAlert: UIViewController {
     private var messageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.numberOfLines = 4
+        label.numberOfLines = 10
         label.font = .preferredFont(forTextStyle: .subheadline)
         return label
     }()
@@ -146,6 +150,17 @@ open class BeautyAlert: UIViewController {
     }
     
     private func configUI() {
+        var widthRatio: Double = 0.0
+        
+        switch UserDevice.deviceIdiom {
+        case .phone:
+            widthRatio = 0.8
+        case .pad:
+            widthRatio = 0.3
+        default:
+            break
+        }
+        
         contentView.layer.masksToBounds = false
         contentView.layer.cornerRadius = 10
         
@@ -167,7 +182,7 @@ open class BeautyAlert: UIViewController {
         NSLayoutConstraint.activate([
             contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             contentView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            contentView.widthAnchor.constraint(equalToConstant: self.view.frame.width * 0.8),
+            contentView.widthAnchor.constraint(equalToConstant: self.view.frame.width * widthRatio),
             
             contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             contentStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
